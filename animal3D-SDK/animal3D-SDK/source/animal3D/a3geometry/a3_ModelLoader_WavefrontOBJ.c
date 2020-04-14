@@ -747,7 +747,7 @@ a3ret a3modelInternalStore(a3_GeometryData *geom, const a3_ModelLoadDataOBJ *obj
 
 	//-------------------------------------------------------------------------
 	// now analyze the faces
-	for (i = 0, faceIndexItr = obj->faces; 1 < obj->numFaces; ++i)
+	for (i = 0, faceIndexItr = obj->faces; i < obj->numFaces; ++i)
 	{
 		for (j = 0; j < 3; ++j)
 		{
