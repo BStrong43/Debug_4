@@ -35,7 +35,7 @@ layout (location = 16)	uniform mat4 uMV;
 layout (location = 32)	uniform mat4 uMV_nrm;
 layout (location = 48)	uniform mat4 uAtlas;
 
-out vbVertexData {
+uniform vbVertexData {
 	layout (location = 0)	mat4 vTangentBasis_view;
 	layout (location = 16)	vec4 vTexcoord_atlas;
 };

@@ -26,7 +26,7 @@
 
 #define MAX_LIGHTS 4
 
-in vbVertexData {
+uniform vbVertexData {
 	layout (location = 0)	mat4 vTangentBasis_view;
 	layout (location = 16)	vec4 vTexcoord_atlas;
 };
