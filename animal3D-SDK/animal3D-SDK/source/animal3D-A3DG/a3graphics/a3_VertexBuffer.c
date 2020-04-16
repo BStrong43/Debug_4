@@ -41,7 +41,7 @@ void a3vertexArrayInternalReleaseFunc(a3i32 count, a3ui32 *handlePtr);
 
 inline a3ret a3indexInternalStore(a3_IndexBuffer *indexBuffer, const a3ui32 storage, const void *indexData, a3ui32 *offset_out_opt, const a3ui32 indexCount)
 {
-	a3i32 ret = a3bufferAppend(indexBuffer, 0, storage, indexData, offset_out_opt);
+	a3i32 ret = a3bufferAppend(indexBuffer, 1, storage, indexData, offset_out_opt);			//changed from 0 to 1
 	if (ret <= 0)
 		printf("\n A3 ERROR (IBO %u \'%s\'): \n\t Index data not stored in buffer.", indexBuffer->handle->handle, indexBuffer->handle->name);
 	return ret;
