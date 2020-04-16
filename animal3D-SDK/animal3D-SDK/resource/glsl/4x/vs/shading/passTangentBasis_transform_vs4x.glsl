@@ -23,6 +23,7 @@
 */
 
 #version 430
+#extension GL_ARB_separate_shader_objects : enable
 
 layout (location = 10)	in vec4 aTangent;
 layout (location = 11)	in vec4 aBitangent;
@@ -35,13 +36,13 @@ layout (location = 16)	uniform mat4 uMV;
 layout (location = 32)	uniform mat4 uMV_nrm;
 layout (location = 48)	uniform mat4 uAtlas;
 
-//uniform vbVertexData {
-//	layout (location = 64) mat4 vTangentBasis_view;
-//	layout (location = 72)	vec4 vTexcoord_atlas;
-//};
+out vbVertexData {
+	layout (location = 0) mat4 vTangentBasis_view;
+	layout (location = 16)	vec4 vTexcoord_atlas;
+};
 
-layout (location = 0) out mat4 vTangentBasis_view;
-layout (location = 16) out	vec4 vTexcoord_atlas;
+//layout (location = 0) out mat4 vTangentBasis_view;
+//layout (location = 16) out	vec4 vTexcoord_atlas;
 
 void main()
 {
